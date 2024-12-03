@@ -17,17 +17,17 @@
             <label for="paid">Призовые места</label>
             <input id="paid" placeholder="Places" type="number" value="3" onchange="changePlacesPaid(this.value)"/>
             <div id="paid-error" class="error"></div>
-            <br/>Общее количество очков
+            <br/>Общее количество баллов
             <br/>
             <input id="prize" placeholder="Prize" type="number" value="" />
-            <br/> Минимум очков на игрока
+            <br/> Минимум баллов на игрока
             <br/>
             <input id="minimalPayout" type="number" value="1" />
             <br/> Округлить до
             <br/>
             <input id="round" type="number" value="1" />
             <br/>
-            <button type="submit" onclick="showPayouts(calculate());">Calculate</button>
+            <button type="submit" onclick="showPayouts(calculate());">Посчитать</button>
         </form>
         <br/>
         <div id="payouttable" class="table">
@@ -35,13 +35,13 @@
         <template id="headTemplate" class="table">
             <div class="row">
                 <div class="cell">#</div>
-                <div class="cell">Payout</div>
+                <div class="cell">Баллы</div>
             </div>
         </template>
         <template id="rowtemplate">
             <div class="row">
                 <div class="place">Place</div>
-                <div class="payout">Payout</div>
+                <div class="payout">Баллы</div>
             </div>
         </template>
     </div>
