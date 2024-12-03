@@ -14,18 +14,18 @@
 <body>
     <div id="main">
         <form onsubmit="return false">
-            <label for="paid">Places paid</label>
-            <input id="paid" placeholder="Places" type="number" value="8" onchange="changePlacesPaid(this.value)"/>
+            <label for="paid">Призовые места</label>
+            <input id="paid" placeholder="Places" type="number" value="3" onchange="changePlacesPaid(this.value)"/>
             <div id="paid-error" class="error"></div>
-            <br/>Total prize money
+            <br/>Общее количество очков
             <br/>
             <input id="prize" placeholder="Prize" type="number" value="" />
-            <br/> Minimal payout
+            <br/> Минимум очков на игрока
             <br/>
-            <input id="minimalPayout" type="number" value="10" />
-            <br/> Round on
+            <input id="minimalPayout" type="number" value="1" />
+            <br/> Округлить до
             <br/>
-            <input id="round" type="number" value="5" />
+            <input id="round" type="number" value="1" />
             <br/>
             <button type="submit" onclick="showPayouts(calculate());">Calculate</button>
         </form>
