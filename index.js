@@ -11,7 +11,11 @@ const payoutRatio = {
     5: [35, 25, 18, 13, 9],
     6: [32, 22, 16.5, 12.5, 9, 8],
     7: [30, 19, 15, 12, 9, 8, 7],
-    8: [34, 21, 15, 11, 7, 5, 4, 3]
+    8: [29.75, 18.75, 14.75, 11.25, 8.5, 7, 5.5, 4.5],
+    9: [29.5, 18.75, 14, 10, 8, 6.75, 5.5, 4.25, 3.25],
+    10: [19, 18.65, 13.75, 9.50, 7.75, 6.30, 5.25, 4.15, 3.15, 2.50],
+    11: [28.75, 18.60, 13.60, 9.60, 7.50, 6, 4.85, 3.80, 2.95, 2.40, 2.30],
+    12: [28.50, 18.50, 13.50, 9, 7.25, 5.75, 4.5, 3.5, 2.75, 2.25, 2.25, 2.25]
 };
 
 function calculate() {
@@ -85,10 +89,10 @@ function changePlacesPaid(paid) {
 function validatePlacesPaid(paid) {
     const paidInt = parseInt(paid);
     if (isNaN(paidInt)) {
-        return "Enter a number";
+        return "Введите число";
     }
-    if (paidInt < 1 || paidInt > 8) {
-        return "Must be between 1 and 8";
+    if (paidInt < 1 || paidInt > 12) {
+        return "Доделаю, если на турнир придёт 25 человек!";
     }
     return undefined;
 }
@@ -99,3 +103,4 @@ function validatePlacesPaid(paid) {
 function getPayoutRatio() {
     return payoutRatio;
 }
+
